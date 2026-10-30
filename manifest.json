@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Rally Assist",
+  "version": "1.1.0",
+  "minimum_chrome_version": "111",
+  "description": "Laptop-side perfect timing, auto-return and shot presets for Rally.",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://playrally.cc/*",
+        "https://www.playrally.cc/*",
+        "https://rally-gamma-gold.vercel.app/*",
+        "http://localhost/*",
+        "http://127.0.0.1/*"
+      ],
+      "js": [
+        "core.js",
+        "panel.js"
+      ],
+      "world": "MAIN",
+      "run_at": "document_idle"
+    }
+  ]
+}
