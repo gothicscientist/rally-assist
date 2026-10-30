@@ -23,7 +23,9 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: rally-assist-screenshots
-          path: docs/media/*.png
+          path: |
+            docs/media/*.png
+            docs/media/preview.svg
           if-no-files-found: error
   publish-captures:
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
@@ -46,7 +48,7 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/media/overview.png docs/media/panel.png docs/media/minimized.png docs/media/narrow.png
+          git add docs/media/overview.png docs/media/panel.png docs/media/minimized.png docs/media/narrow.png docs/media/preview.svg
           if ! git diff --cached --quiet; then
             git commit -m "docs: refresh verified extension screenshots"
             git push origin HEAD:main

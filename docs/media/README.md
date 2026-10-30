@@ -22,3 +22,5 @@ The script overwrites these four captures. The GitHub Actions workflow also uplo
 The original inline SVG paddle mark is part of the extension. There are no redistributed game images or stock photographs.
 
 Successful pushes to `main` publish the verified captures back to the repository when the source revision is still current. Pull-request runs upload artifacts without changing the repository.
+
+[Side-by-side preview sheet](preview.svg) combines the expanded and narrow captures at their native pixel sizes. It embeds the original PNGs without recreating the controls.
