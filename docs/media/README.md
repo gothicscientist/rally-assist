@@ -20,3 +20,5 @@ npm run screenshots
 The script overwrites these four captures. The GitHub Actions workflow also uploads them as `rally-assist-screenshots`. No phone connection, production game request, or invented statistics is used.
 
 The original inline SVG paddle mark is part of the extension. There are no redistributed game images or stock photographs.
+
+Successful pushes to `main` publish the verified captures back to the repository when the source revision is still current. Pull-request runs upload artifacts without changing the repository.

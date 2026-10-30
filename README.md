@@ -8,7 +8,7 @@
 
 Rally turns a phone into a table-tennis paddle. Rally Assist is a separate Chrome / Edge extension that attaches to the display client and modifies the local player's swing timing and shot parameters. It reads the game's simulation directly through `window.rally`, rather than estimating ball position from screenshots.
 
-**I built the extension, not the underlying game.** [Rally](https://playrally.cc) is by [Aiden Guan](https://github.com/aiden-guan/rally). This is an unofficial client modification, with no affiliation implied.
+Extension by **Bharat Bhati**, built for [Rally](https://playrally.cc), Aiden Guan's phone-controlled table-tennis game. [Original game source](https://github.com/aiden-guan/rally).
 
 ## What it does
 

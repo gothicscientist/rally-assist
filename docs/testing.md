@@ -46,6 +46,6 @@ Coverage includes legal serves on both human sides at 15/30/60/144 FPS; smash, l
 - Eight core tests passed.
 - Eight original-snapshot simulation tests passed using the previously saved game modules.
 - Manifest/script validation and documentation-link checking are available through `npm run check`.
-- Installed-extension browser tests and image capture run in the repository's GitHub Actions workflow. Consult the workflow result for the current revision.
+- The installed-extension Chromium test, all eight core tests, screenshot capture, and manifest/documentation checks passed in [GitHub Actions run 41109676822](https://github.com/gothicscientist/rally-assist/actions/runs/41109676822). Later revisions have their own workflow results.
 
 No live online match was verified. Test coverage should not be described as a win rate, production reliability measurement, or proof that the current game accepts these modified swings.
