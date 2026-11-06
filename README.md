@@ -2,13 +2,17 @@
 
 **A browser-side assist client for Rally: perfect contact timing, automated returns, and configurable shot placement.**
 
-[Install](#install) · [Controls](#controls) · [Architecture](#architecture) · [Engineering notes](docs/architecture.md) · [Test evidence](docs/testing.md)
-
-![Rally Assist control panel running in a local UI fixture](docs/media/overview.png)
+[Preview](#preview) · [Install](#install) · [Controls](#controls) · [Architecture](#architecture) · [Engineering notes](docs/architecture.md) · [Test evidence](docs/testing.md)
 
 Rally turns a phone into a table-tennis paddle. Rally Assist is a separate Chrome / Edge extension that attaches to the display client and modifies the local player's swing timing and shot parameters. It reads the game's simulation directly through `window.rally`, rather than estimating ball position from screenshots.
 
 Extension by **Bharat Bhati**, built for [Rally](https://playrally.cc), Aiden Guan's phone-controlled table-tennis game. [Original game source](https://github.com/aiden-guan/rally).
+
+## Preview
+
+![Rally Assist control panel running in a local UI fixture](docs/media/overview.png)
+
+The screenshot shows the extension on a controlled fixture. Use the [local browser preview](#run-the-preview) to try the panel without installing it, or follow [Install](#install) to load the extension in Chrome or Edge.
 
 ## What it does
 
@@ -102,15 +106,18 @@ npm run check
 
 `npm test` covers option validation, hook restoration, match replacement, local-side selection, lifecycle guards, hit accounting, and failure recovery. The browser suite loads the actual unpacked extension into Chromium against a controlled page. The [Actions workflow](.github/workflows/check.yml) runs these checks and uploads the captured UI images.
 
-For a browser preview without installing the extension:
+The optional original-physics suite requires a compatible Rally source checkout. Its eight tests cover legal serves across frame rates, shot types, manual timing, shutdown, and match transitions. Game sources are not redistributed. [Setup and verification scope](docs/testing.md).
+
+### Run the preview
+
+From the repository folder, with Node.js 22+:
 
 ```sh
+npm ci
 npm run preview
 ```
 
 Open [http://127.0.0.1:4173](http://127.0.0.1:4173). This page loads the same UI and core scripts with explicit fixture-state controls; it does not run Rally. Stop with Ctrl+C.
-
-The optional original-physics suite requires a compatible Rally source checkout. Its eight tests cover legal serves across frame rates, shot types, manual timing, shutdown, and match transitions. Game sources are not redistributed. [Setup and verification scope](docs/testing.md).
 
 ## Repository map
 
